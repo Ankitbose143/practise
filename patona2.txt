@@ -1,0 +1,12 @@
+https://www.facebook.com/favicon.ico 1
+https://www.google.com/ 2
+https://mail.google.com/mail/u/0/ 3
+https://www.google.co.in 5
+https://patona.com.au/ 5
+https://my.naukri.com/ 6
+link3 7
+link4 8
+link1 6
+link3 7
+link3 3
+link6 5

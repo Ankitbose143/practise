@@ -1,0 +1,9 @@
+import logging as lg
+lg.basicConfig(level=lg.INFO)
+lg.debug("debdede")
+lg.info("This")
+lg.warning("War")
+lg.error("err")
+lg.critical("fig")
+
+from gramex.debug import lineprofile
