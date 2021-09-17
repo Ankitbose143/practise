@@ -1,0 +1,8 @@
+Follow the instructions in the Python Packaging Guide:
+
+Create an account on PyPI if you haven't yet.
+Create the source distribution and wheels for your package: python setup.py sdist bdist_wheel
+Install twine (or make sure you have version 2.0 or newer): pip install twine
+Check your distribution files for errors: twine check dist/*
+(Optional) Upload to the PyPI test server first (note: separate user registration required): twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+Upload to PyPI: twine upload dist/*
