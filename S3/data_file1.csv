@@ -1,0 +1,4 @@
+Name,acl_name,always_include,baselined_by,comment,dst_hostname,dst_network,dst_network_type,dst_port,editor,established,expiry,id,juniper_xml,last_baselined,last_modified,owner,protocol,request_tt,rule_type,src_hostname,src_network,src_network_type,src_port,uri
+LOWER-LD-RIGOR
+HIGHER-LD-RIGOR,HIGHER-LD-RIGOR,1,,hello,,cart,domain,3371,partha,0,928363,123,,,194,fhz,tcp,P672811,Allow,,HIGHER-LD-RIGOR,host,ANY,/https/HIGHER-LD-RIGOR/
+HIGHER-LD-RIGOR,HIGHER-LD-RIGOR,0,,NOTE:time=2021-02-03Tuser=mbc-readwrite,,192.199.23.106/32,network,33,liker,0,2000937599,445,,,568282201,partha5,udp,178022,Disabled,,10.0.1.155/24,new,128,blah/blah

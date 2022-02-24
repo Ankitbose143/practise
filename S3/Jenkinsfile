@@ -1,0 +1,31 @@
+pipeline
+{
+    agents {labels:linux}
+    stages{
+        stage("build"){
+            steps{
+                script {sh 'python xyz.py'}
+            }
+        }
+    }
+}
+
+
+#xyz.py 4343
+
+git add xyz.py
+git commit -m "upd values"
+git pull origin dev
+#merge conflicts manually resolve
+git status
+git add <files>
+git commit -m "upd"
+git push origin dev-ank 
+
+git logs
+#commit ids
+git revert <commit1>
+commit id>
+commit1
+commit2
+commit3

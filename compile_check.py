@@ -8,6 +8,12 @@ import inspect
 import nltk
 import atexit
 s = 'hjsdsjd ankit bose jhdsjd apple'
+
+@profile
+def f(a,b):
+    return a+b
+
+print(f(3,4))
 # tags12 = nltk.tag(s.split())
 # print(tags12)
 # print(nltk.ne_chunk(tags12))
@@ -32,7 +38,7 @@ i_run_once_has_been_run = False
 s = ''
 st1 = datetime.now()
 # @lineprofile
-@profile
+# @profile
 def hunflair_run_once(macid):
     previous_frame = inspect.currentframe().f_back
     (filename, line_number, 
@@ -51,7 +57,7 @@ def hunflair_run_once(macid):
     print("Tagger initalize, tagger =r'xyz.pt'",s)
     # func12()
     i_run_once_has_been_run = True
-    print(profile.print_stats)
+    # print(profile.print_stats)
 
 
 def func12():
@@ -61,8 +67,8 @@ def func12():
 func12()
 
 hunflair_run_once(12)
-print(profile.print_stats)
-atexit.register(profile.print_stats)
+# print(profile.print_stats)
+# atexit.register(profile.print_stats)
 func12()
 hunflair_run_once(12)
 func12()
@@ -71,6 +77,8 @@ func12()
 hunflair_run_once(23)
 func12()
 
+
+@profile
 def func(b):
     b =100
     print(b)
