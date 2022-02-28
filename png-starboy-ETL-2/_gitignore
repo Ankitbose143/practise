@@ -1,0 +1,9 @@
+env/
+.vscode/
+PH Baby Diaper  Brand.xslx
+test.csv
+brand.csv
+__pycache__/
+converted/
+copy_csv/node_modules/
+copy_csv/csv/
