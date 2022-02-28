@@ -123,7 +123,7 @@
 #     print(per)
 # print(sorted(k, key = lambda i:i[1]))
 
-l = [1,2,6,3,4,56,2,1]
+l = [1,3,4,6,2,6,3,4,56,2,1]
 
 # smallest non repeating no 3
 i = 1
@@ -137,23 +137,35 @@ k = []
         # break
     # if count==1:
     #     break
-
+l = [1,2,6,3,4,56,2,1,56,3,4,6,6]
 g = [[t,l.count(t)] for t in set(l)]
+h = [l.count(t) for t in set(l)]
+s = g
+# s = sorted(g, key=lambda i:i[1], reverse= True)
+print("g-------------",g)
+print("sg-------------",s)
+print(sorted(g, key=lambda i:i[1], reverse= True))
+print("sgsh-------------",h, max(h), set(h))
+# if len(set(h))==1:
+    # print("no repeat")
+if max(h)==1:
 
-s = sorted(g, key=lambda i:i[1], reverse= True)
-# print(s)
-iw = 1
-for i in range(len(s)):
-    # print(s[i])
-    if s[i][1]==iw:
-        print(s[i][0])
-        break
+    iw = 1
+else:
+    iw = max(h)
+    print(iw)
+for iwe in range(1,iw):
+    for i in range(len(s)):
+        # print(s[i])
+        if s[i][1]==iwe:
+            print("asasasasas",s[i][0])
+            break
 
 from collections import defaultdict
  
 def firstNonRepeating(arr, n):
     mp = defaultdict(lambda:0)
- 
+    print(mp)
     # Insert all array elements in hash table
     for i in range(n):
         mp[arr[i]] += 1
@@ -174,6 +186,14 @@ def firstNonRepeating(arr, n):
 # Driver Code
 arr = [9, 4, 9, 6, 7, 4,6,6,7]
 n = len(arr)
+mp2 = defaultdict(lambda:0)
+print(mp2)
+    # Insert all array elements in hash table
+for i in range(n):
+    mp2[arr[i]] = mp2[arr[i]]+1
+    print("mp2222======", mp2)
+
+print("mp2",mp2)
 print(firstNonRepeating(arr, n))
 d = {9: 2, 4: 2, 6: 2, 7: 2}
 for k,v in d.items():
@@ -201,7 +221,7 @@ for t in l:
         e.append(t[1])
     #     f.append({t[0]:t[1]})
     # print(t,t[0] in f)
-print(df)
+print("df=-------",df)
 
 dict1={"one":1,"two":2,"three":3,"three1":4,"three32":1}
 list1=[]
@@ -214,3 +234,17 @@ for i in range(len(dict1)):
     list1.append(sml)
 
 print("list1==",list1,sml)
+# 
+# int(x = 
+
+def ty(*args):
+    print("===", args)
+
+def rt(*args):
+    d = list(map(ty,*args))
+    print(args, type(args))
+    for t in d:
+        print("t",t)
+    print(d)
+
+rt("h")

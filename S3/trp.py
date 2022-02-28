@@ -95,5 +95,20 @@ for i in range(len(d)):
 # print(sorted(d, lambda x:(x[0],x[1])))
 # cmr = {'take':10,'bake':10,'cake':5,'rake':5,'sake':2,'pake':2}
 # d ={'abc': [8, 12], 'asd': [10], 'wer': [11, 7], 'opi': [7]}
+d = [{"abc",8},{"asd",10},{'abc', 12}, {'wer',11}, {"opi",7},{'wer',7}]
 # s = [val for val in sorted(d.items(), key = lambda x: len(x[1]), reverse=True)]
 # print("s",s)
+
+from collections import defaultdict
+from itertools import groupby
+from operator import itemgetter
+v= defaultdict(list)
+# # print(v)
+# d = sorted(d, key=itemgetter('abc'))
+# print(d)
+for k,v in groupby(d):#, key=itemgetter('abc')):
+    print(k)
+    # v[k].append(v)
+
+print(v)
+    
