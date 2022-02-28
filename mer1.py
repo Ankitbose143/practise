@@ -4,12 +4,12 @@ def solve (N, Q, A, query):
     dfl = len(A)
     sfg = []
     As = A
-    while len(A)>2:
-        mid = round(N/2)
-        p = A[:mid]
-        sfg.append(p)
-        A = A[mid:]
-    sfg.append(A)
+    # while len(A)>2:
+    #     mid = round(N/2)
+    #     p = A[:mid]
+    #     sfg.append(p)
+    #     A = A[mid:]
+    # sfg.append(A)
     # print(sfg)
     sdfh = 0
     A = As
@@ -23,7 +23,7 @@ def solve (N, Q, A, query):
         B = As
         a, b = s
         k = 0
-        print(a,b)
+        # print(a,b)
         if a ==1:
             if b ==0:
                 while len(A)>2:
@@ -34,20 +34,20 @@ def solve (N, Q, A, query):
                 sfge.append(A)
                 res = []
                 sfge = list(filter(None,sfge))
-                print("sfge1", sfge, res,len(sfge))
+                # print("sfge1", sfge, res,len(sfge))
                 for t in range(0,len(sfge)):
                     tmp = 0
                     # print(sfge[t],len(sfge[t]))
-                    print(t,len(sfge[t]))
+                    # print(t,len(sfge[t]))
                     for ty in range(0,len(sfge[t])):
-                        print(t , ty)
-                        print(sfge[t][ty])
+                        # print(t , ty)
+                        # print(sfge[t][ty])
                         # if sfge[t][ty]:
 
                         tmp = tmp+sfge[t][ty]
-                    print(tmp)
+                    # print(tmp)
                     res.append(tmp)
-                    print(res)
+                    # print(res)
                 for tyu in res:
                     k = tyu-k
                 # k = int(lambda x,y: x-y,res)
@@ -57,14 +57,14 @@ def solve (N, Q, A, query):
             else:
                 sfge = []
                 c=0
-                print("lena",len(A),b)
+                # print("lena",len(A),b)
                 for t in range(1,b+1):
                     sdf = A[-1]
                     A= A[:-1]
                     A.insert(c,sdf)
                     # print("chk", sdf)
                 for i in range(0, len(A), round(len(A)/2)):
-                    # print("i==",i)
+                    # print("i==",i)sfge-t
                     # if i>270:
                     #     n = int(len(A))
                     # else:
@@ -81,7 +81,7 @@ def solve (N, Q, A, query):
                 res = []
                 print("sfge1", sfge, len(sfge))
                 sfge = list(filter(None,sfge))
-                print(len(sfge))
+                # print(len(sfge))
                 for t in range(0,len(sfge)):
                     tmp = 0
                     # print(sfge[t],len(sfge[t]))
@@ -92,15 +92,17 @@ def solve (N, Q, A, query):
                         tmp = tmp+sfge[t][ty]
                     # print(tmp)
                     res.append(tmp)
-                print(res)
+                # print(res)
                 for tyu in res:
                     k = tyu-k
-                print("k",k)
+                # print("k",k)
                 # k = int(lambda x,y: x-y,res)
                 str_out+=str(abs(k))
                 # print("sfge11", sfge, res,k,str_out)
+            str_out+=' '
         elif a ==2:
-            print("aaa",a,A)
+            A = As
+            # print("aaa",a,A)
             if b ==0:
                 sfge =[]
                 while len(A)>2:
@@ -110,7 +112,7 @@ def solve (N, Q, A, query):
                     A = A[mid:]
                 sfge.append(A)
                 res = []
-                print("sfge1a", sfge, res)
+                # print("sfge1a", sfge, res)
                 sfge = list(filter(None,sfge))
                 for t in range(0,len(sfge)):
                     tmp = 0
@@ -132,14 +134,14 @@ def solve (N, Q, A, query):
             else:
                 sfge = []
                 c=0
-                print(A)
+                print(A,b)
                 for t in range(1,b+1):
                     # print("As2",A)
                     sdf = A[0]
                     A= A[1:]
                     A.insert(len(A),sdf)
-                    print("As120",sdf,A)
-                print("sfge00", sdf, A)
+                print("As120",b,sdf,A)
+                # print("sfge00", sdf, A)
                 while len(A)>2:
                     mid = round(N/2)
                     pr = A[:mid]
@@ -165,6 +167,7 @@ def solve (N, Q, A, query):
                 # k = int(lambda x,y: x-y,res)
                 str_out+=str(abs(k))
                 # print("sfge00", sfge, res,k,str_out)
+            str_out+=' '
 
 
 
@@ -181,4 +184,4 @@ for _ in range(T):
 
     out_ = solve(N, Q, A, query)
     print("out=",out_)
-    print (' '.join(map(str, out_)))
+    print (''.join(map(str, out_)))

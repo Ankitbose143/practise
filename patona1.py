@@ -6,7 +6,9 @@
 
 
 from string import ascii_lowercase
+from pyprofiling import pyprofiling
 # ascii_lowercase ='abcdefghijklmnopqrstuvwxyz'
+@pyprofiling.profiler()
 def main(n):
     try:
         count2 = 1

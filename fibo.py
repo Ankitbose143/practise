@@ -1,6 +1,7 @@
 import pandas as pd
 import re , time
 df = pd.read_excel(r'sd.xlsx')
+print(df.columns)
 de = ['sc', 'pharmacy']
 st = time.time()
 import geocoder
