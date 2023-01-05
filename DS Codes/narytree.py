@@ -16,10 +16,14 @@ def preorder(root: Node) -> list:
 
     # Visit the root node
     result = [root.val]
-
+    print(result)
+    print("ROOTCHILDREN",root.children)
     # Recursively visit the children of the root
-    for child in root.children:
-        result.extend(preorder(child))
+    if root.children is not None:
+        for child in root.children:
+            print("child", child)
+            if child is not None:
+                result.extend(preorder(child))
 
     return result
 
