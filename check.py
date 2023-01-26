@@ -2,7 +2,6 @@ def mydec(f):
     def wp():
         print("hi111")
         print(f())
-
     return wp
 
 
