@@ -10,6 +10,9 @@ import pandas as pd
 import openpyxl
 import requests
 import docx, pptx,fitz
+# Then you can use textract (which uses antiword for .doc files) like this:
+import textract
+text = textract.process('filename.doc')
 # from pandas.core.indexes.numeric import Float64Index
 import wget
 

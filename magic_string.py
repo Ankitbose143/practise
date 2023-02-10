@@ -9,6 +9,7 @@ for t in range(len(d)):
     # print(t)
     # if v ==0:
     if 'AA' in d[t:t+2]:
+        pass
         # s +=d[t]
         # elif 'BB' in d[t]:
         #     s+=d[t]
