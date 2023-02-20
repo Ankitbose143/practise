@@ -37,7 +37,7 @@ def is_downloadable(url):
 def file_extension(file):
     try:
         actual_file = os.path.splitext(file)
-        # print(actual_file)
+        print(actual_file)
         if actual_file[1] == '.doc':
             fp = open(file, 'r' ,encoding = 'cp1252', errors = 'ignore')
         if actual_file[1] == '.docx':

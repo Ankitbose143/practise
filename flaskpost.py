@@ -17,6 +17,7 @@ conn1= sql.connect('D:\\daba1.db')
 # )""")
 # conn1.commit()
 # conn1.close()
+
 class Example(db.Model):
     id = db.Column(db.Integer,primary_key = True)
     name = db.Column(db.String(50))
